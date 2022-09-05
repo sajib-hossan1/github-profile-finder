@@ -1,5 +1,6 @@
 const APIURL  = "https://api.github.com/users/";
 const cardHtml = document.getElementById('card');
+const searchBox = document.getElementById('search');
 
 const getUser = async (username) => {
     const response = fetch(APIURL + username);
@@ -21,7 +22,7 @@ const getUser = async (username) => {
                 </div>
                 <div class="user-info">
                     <h2>${name}</h2>
-                    <p>${bio?.slice(0,50)}...</p>
+                    <p>${bio == null ? "..." : bio?.slice(0,50)}</p>
 
                     <ul class="info">
                         <li>${followers} Followers</li>
@@ -59,9 +60,16 @@ const getRepos = async (username) => {
 };
 
 const formSubmit = () => {
-    const searchBox = document.getElementById('search');
     if(searchBox != ""){
         getUser(searchBox.value);
     }
     return false;
-}
+};
+
+
+searchBox.addEventListener(
+    "focusout",
+    function(){
+        formSubmit();
+    }
+)
