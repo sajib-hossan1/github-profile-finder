@@ -12,29 +12,11 @@
 <body>
     <main id="main">
         <div>
-            <form id="form">
-                <input type="text" placeholder="Find Someone On Github">
+            <form id="form" onsubmit="return formSubmit()">
+                <input type="text" id="search" placeholder="Find a github user">
             </form>
-            <div class="card">
-                <div class="avatar">
-                    <img src="images/user2.jpg" alt="">
-                </div>
-                <div class="user-info">
-                    <h2>Name</h2>
-                    <p>Bio</p>
+            <div id="card">
 
-                    <ul class="info">
-                        <li>Followers</li>
-                        <li>Following</li>
-                        <li>Repo</li>
-                    </ul>
-
-                    <div id="repos">
-                        <a class="repo" target="_blank" href="#">Repo 1</a>
-                        <a class="repo" target="_blank" href="#">Repo 2</a>
-                        <a class="repo" target="_blank" href="#">Repo 3</a>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
