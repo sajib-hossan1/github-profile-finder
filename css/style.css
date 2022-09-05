@@ -3,3 +3,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #30336b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+#form {
+    text-align: center;
+}
+
+#form input {
+    background-color: #5f49db;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.458);
+}
+
+.card {
+    background-color: #5f49db;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+    color: white;
+    border-radius: 15px;
+}
+
+.card img {
+    width: 100px;
+    border-radius: 50%;
+    border: 7px solid #30336b;
+}
+
+.card  .user-info .info {
+    list-style: none;
+    display: flex;
+}
+
+.card  .user-info .info li {
+    margin-right: 20px;
+}
+
+.card  .user-info #repos {
+    margin-top: 10px;
+}
+
+.card  .user-info #repos a{
+    text-decoration: none;
+    background-color: #30336b;
+    color: rgba(255, 255, 255, 0.673);
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-right: 5px;
+}
